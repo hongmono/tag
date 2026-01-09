@@ -535,7 +535,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 40px;
         gap: 10px;
-        align-items: end;
+        align-items: start;
         width: 100%;
       }
 
@@ -632,7 +632,7 @@
         display: grid !important;
         grid-template-columns: 1fr 1fr 1fr 40px !important;
         gap: 10px;
-        align-items: end;
+        align-items: start;
         width: 100%;
       }
       .knowledge-search-col {
@@ -1008,17 +1008,17 @@
           // 검색 입력
           menuHtml += '<input type="text" class="behavior-dropdown-search" placeholder="검색..." oninput="filterDropdown(this)" />';
           // placeholder 선택 항목
-          menuHtml += '<div class="behavior-dropdown-item behavior-dropdown-item-option placeholder" onclick="' + onclickBuilder('') + '">' + placeholder + '</div>';
+          menuHtml += '<div class="behavior-dropdown-item behavior-dropdown-item-option placeholder" onclick="' + onclickBuilder('') + '">' + escapeHtml(placeholder) + '</div>';
           // 옵션 목록
           options.forEach(opt => {
-            menuHtml += '<div class="behavior-dropdown-item behavior-dropdown-item-option" data-label="' + escapeHtml(opt.label || '') + '" onclick="' + onclickBuilder(opt.value) + '">' + opt.label + '</div>';
+            menuHtml += '<div class="behavior-dropdown-item behavior-dropdown-item-option" data-label="' + escapeHtml(opt.label || '') + '" onclick="' + onclickBuilder(opt.value) + '">' + escapeHtml(opt.label || '') + '</div>';
           });
           return ''
             + '<div class="knowledge-search-col">'
-            +   '<div class="knowledge-search-label">' + label + '</div>'
+            +   '<div class="knowledge-search-label">' + escapeHtml(label) + '</div>'
             +   '<div class="behavior-dropdown">'
             +     '<button type="button" class="behavior-dropdown-toggle" data-problem-index="' + problemIndex + '" data-dropdown-type="' + dropdownType + '" onclick="toggleBehaviorDropdown(this)">'
-            +       '<span class="behavior-dropdown-label' + (isPlaceholder ? ' placeholder' : '') + '">' + currentText + '</span>'
+            +       '<span class="behavior-dropdown-label' + (isPlaceholder ? ' placeholder' : '') + '">' + escapeHtml(currentText) + '</span>'
             +       '<span class="behavior-dropdown-arrow">▼</span>'
             +     '</button>'
             +     '<div class="behavior-dropdown-menu">'
