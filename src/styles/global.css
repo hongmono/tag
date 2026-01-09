@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* KaTeX 스타일 */
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-display {
+  margin: 1em 0;
+}
