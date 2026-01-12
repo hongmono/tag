@@ -146,6 +146,7 @@ const ProblemViewer: React.FC = () => {
     <div className="max-w-[1800px] mx-auto bg-white rounded-xl shadow-md overflow-hidden">
       <Header
         title="문항 태그 및 분류 검수 editor"
+        subtitle="데이터 통합 뷰어"
       />
 
       {!isDataLoaded && (
