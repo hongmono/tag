@@ -101,7 +101,7 @@ const InfoPanel: React.FC<InfoPanelProps> = ({
 
         {/* 저장 섹션 */}
         {canSave && (
-          <div className="mt-5 p-4 bg-gray-50 rounded-md text-center">
+          <div className="mt-5 p-4 bg-gray-50 rounded-md flex justify-center">
             <Button variant="save" onClick={onSave}>
               결과 저장
             </Button>
