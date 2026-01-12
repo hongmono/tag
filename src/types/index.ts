@@ -114,7 +114,6 @@ export interface LatexJsonData {
 
 // 행동 영역 옵션
 export const BEHAVIOR_AREA_OPTIONS = [
-  { value: '', label: '미선택' },
   { value: '계산 능력', label: '계산 능력' },
   { value: '이해 능력', label: '이해 능력' },
   { value: '추론 능력', label: '추론 능력' },

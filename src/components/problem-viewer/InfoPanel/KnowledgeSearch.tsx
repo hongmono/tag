@@ -68,9 +68,9 @@ const KnowledgeSearch: React.FC<KnowledgeSearchProps> = ({
 
   return (
     <div className="mt-4 mb-6">
-      <div className="grid grid-cols-[1fr_1fr_1fr_40px] gap-2.5 items-start w-full">
+      <div className="grid grid-cols-[1fr_1fr_1fr_40px] gap-2.5 items-end w-full">
         <div className="flex flex-col gap-1 min-w-0">
-          <div className="text-sm text-gray-500 whitespace-nowrap">교육과정</div>
+          <div className="text-sm text-gray-500 whitespace-nowrap leading-6">교육과정</div>
           <Dropdown
             options={curriculumOptions}
             value={searchState.curriculum_name || ''}
@@ -81,7 +81,7 @@ const KnowledgeSearch: React.FC<KnowledgeSearchProps> = ({
         </div>
 
         <div className="flex flex-col gap-1 min-w-0">
-          <div className="text-sm text-gray-500 whitespace-nowrap">단원</div>
+          <div className="text-sm text-gray-500 whitespace-nowrap leading-6">단원</div>
           <Dropdown
             options={unitOptions}
             value={searchState.unit_id ? String(searchState.unit_id) : ''}
@@ -92,7 +92,7 @@ const KnowledgeSearch: React.FC<KnowledgeSearchProps> = ({
         </div>
 
         <div className="flex flex-col gap-1 min-w-0">
-          <div className="text-sm text-gray-500 whitespace-nowrap">개념</div>
+          <div className="text-sm text-gray-500 whitespace-nowrap leading-6">개념</div>
           <Dropdown
             options={knowledgeOptions}
             value={searchState.knowledge_id ? String(searchState.knowledge_id) : ''}
@@ -102,8 +102,7 @@ const KnowledgeSearch: React.FC<KnowledgeSearchProps> = ({
           />
         </div>
 
-        <div className="w-10 min-w-10 max-w-10 flex flex-col gap-1">
-          <div className="text-sm text-gray-500 invisible">추가</div>
+        <div className="w-10 min-w-10 max-w-10">
           <button
             type="button"
             className="w-10 h-10 border border-green-500 bg-white text-green-500 text-2xl rounded-full cursor-pointer flex items-center justify-center hover:bg-green-500 hover:text-white transition-all"

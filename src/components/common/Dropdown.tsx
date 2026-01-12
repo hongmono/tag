@@ -90,6 +90,7 @@ const Dropdown: React.FC<DropdownProps> = ({
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           )}
+          {/* 미선택 옵션 (이탤릭) */}
           <div
             className="px-3 py-2 text-base cursor-pointer whitespace-nowrap text-gray-500 italic hover:bg-gray-100"
             onClick={() => handleSelect('')}
