@@ -79,7 +79,7 @@ const FileUploadSection: React.FC<FileUploadSectionProps> = ({
         </div>
       )}
 
-      <div className="mt-5 text-center">
+      <div className="mt-5 flex justify-center">
         <Button variant="primary" onClick={onLoad} disabled={!canLoad || isLoading}>
           데이터 로드하기
         </Button>

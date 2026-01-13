@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* 기본 배경/글자색을 강제 지정해 텍스트가 보이지 않는 문제 방지 */
+:root,
+body {
+  background-color: #ffffff;
+  color: #111827;
+}
+
 /* KaTeX 스타일 */
 .katex {
   font-size: 1.1em;
